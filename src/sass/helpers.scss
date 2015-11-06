@@ -1,0 +1,26 @@
+
+/*----------------------------------------------------------------------*/
+
+/**
+* > Helpers
+*/
+html {
+	-webkit-text-size-adjust: 100%;
+	/*  Prevent text size change on orientation change */
+	touch-action: manipulation;
+	-ms-touch-action: manipulation;
+}
+.clearfix:after {
+	clear: both;
+	content: " ";
+	display: block;
+	font-size: 0;
+	height: 0;
+	visibility: hidden;
+}
+* html .clearfix { zoom:1; } /* IE6 */
+*:first-child+html .clearfix { zoom:1; } /* IE7 */
+
+* { box-sizing:inherit; }
+
+*:focus { outline:0; }
