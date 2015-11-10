@@ -17,6 +17,7 @@ module.exports = {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
+    //new webpack.optimize.UglifyJsPlugin({minimize: true}),
     new ExtractTextPlugin('../css/bundle.css', {
         allChunk2s: true
       })

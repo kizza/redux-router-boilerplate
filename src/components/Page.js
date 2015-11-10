@@ -1,25 +1,34 @@
 import React, { Component, PropTypes } from 'react'
+import { Link } from 'react-router'
 
-export default class Page extends Component {
+class Page extends Component {
   render() {
-    const { appTitle, counters, addNewCounter } = this.props
-    console.log(counters)
-    //
+    const { appTitle } = this.props
     return (
       <div>
       The page is here {appTitle}
-      <ol>
-        {counters.map(function(result) {
-          return <li key={result.id}>{result.label}</li>;
-        })}
-      </ol>
-      <button onClick={()=>addNewCounter('test')}>Label</button>
+      <p>
+      <Link to="/">Home</Link>
+      <Link to="/login">Log in</Link>
+      <Link to="/about">About</Link>
+      <Link to="/whatever">No match</Link>
+      </p>
+      {this.props.children}
       </div>
     )
   }
 }
 
-Page.propTypes = {
-  appTitle: PropTypes.string.isRequired,
-  counters: PropTypes.array.isRequired
+
+import { connect } from 'react-redux'
+function mapStateToProps(state) {
+  console.log('state is')
+  console.log(state)
+  return {
+    //counter: state.counter,
+    counters: state.counters,
+    appTitle: state.appTitle
+  }
 }
+
+export default connect(mapStateToProps)(Page)

@@ -1,26 +1,15 @@
 $colour: pink;
 $padding: 10px;
 
-
 body {
-	background: $colour;
+
 }
-
-
-/*----------------------------------------------------------------------*/
-
-/**
-* > Global
-*/
-body {
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	background: $app-background;
-	box-sizing: border-box;
-	overflow-x: hidden;
-}
-
 body, textarea { 
 	font-family:"Roboto","Helvetica Neue",HelveticaNeue,"Helvetica-Neue",Helvetica,"BBAlpha Sans","Trebuchet MS2",sans-serif; }
-h1 { font-size2:200%; }
+h1 { font-size:200%; }
 h2 { font-size:180%; }
 h3 { font-size:160%; }
+
+a {
+	padding: 1em;
+}

@@ -9,18 +9,11 @@ var port = 3001
 
 var compiler = webpack(config)
 app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }))
-app.use(webpackHotMiddleware(compiler))
-
-
-
+app.use(webpackHotMiddleware(compiler)
+  )
 app.use(express.static('public'));
 
-//app.use(express.static(staticPath));
-//app.get('/app*', sendStaticFile('index.html'));
-
-//app.get('/app*', sendStaticFile('index.html'));
-
-app.get("/app*", function(req, res) {
+app.get("*", function(req, res) {
   res.sendFile(__dirname + '/public/index.html')
 })
 
